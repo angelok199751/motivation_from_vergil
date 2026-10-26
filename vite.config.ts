@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// base: './' нужен, чтобы пути к картинкам и музыке работали внутри APK
 export default defineConfig({
-  base: './',
+  base: '/motivation_from_vergil/',
   plugins: [react()],
+  build: {
+    outDir: 'docs',
+    emptyOutDir: true,
+  },
 });
